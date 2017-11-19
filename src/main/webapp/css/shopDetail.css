@@ -1,0 +1,58 @@
+	.progress {
+				margin-top: 1%;
+			}
+			
+			#text,
+			#text1,
+			#text2,
+			#text3 {
+				float: left;
+				text-align: center;
+				width: 25%;
+				margin-top: 1%;
+			}
+			
+			#text3 {
+				color: lightgray;
+			}
+			h2{
+				text-align: center;
+			}
+			#img1,#img2,#img3{
+				float: left;
+				width: 33%;
+				height: 40%;
+				text-align: center;
+			}
+			#continer{
+				height: 100%;
+				width: 100%;
+			}
+			.file{
+				float: left;
+				width: 33%;
+				text-align:center;
+			}
+				
+		#nextstep:hover{
+			color: red;
+			cursor: pointer;
+		}
+		#div1{
+			width: 100%;
+			text-align: center;
+			float: left;
+			margin-top: 5%
+		}
+		#div2{
+			width: 100%;
+		}
+		#div3{
+			height: 400px;
+			width: 100%;
+		}
+		#div4{
+			height: 10%;
+			width: 100%;
+
+		}

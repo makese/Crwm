@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping
+        SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="crwm.site.pojo">
+	<class name="ShopAptitude" table="t_shopaptitude" >
+		<id name="id">
+			<generator class="foreign">
+				<param name="property">shop</param>
+			</generator>
+		</id>
+		<property name="IDCardImgZ"/>
+		<property name="IDCardImgF"/>
+		<property name="shopImg"/>
+		<property name="businessLicenseImg"/>
+		<property name="foodLicense"/>
+		<one-to-one name="shop"  constrained="true" class="Shop"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,74 @@
+#continer{
+				
+				height: 100%;
+				width: 100%;
+				border: 0px;
+			}
+			#div1{
+				background-size: 100%;
+				background-image: url(../images/shopindex.jpg);
+				resize: none;
+				background-repeat: no-repeat;
+				width: 100%;
+				height: 70%;
+			}
+			#myCarousel{
+				height: 20%;
+			}
+			.img{
+				width: 100%;
+				height: 100%;
+			}
+			#div11{
+				float: left;
+				margin-left: 20%;
+				margin-top: 1%;
+			}
+			h3{
+				color: white;
+				text-align: right;
+				margin-right: 2%;
+			}
+			#div12{
+				margin-top: 25%;
+				height:15%;
+				text-align: center;
+			}
+			#btn{
+				width: 46%;
+				height: 90%;
+				margin-top: 0.5%;
+				border: 0px;
+				background-color:#1E90FF;
+				text-decoration: none;
+			}
+			#btn:hover{
+				color: black;
+				cursor: pointer;
+			}
+				#div4{
+			height: 90%;
+			width: 91%;
+			
+			margin-left: 5%;
+		}
+		iframe{
+			height: 100%;
+			width: 100%;
+			border: 0px;
+		}
+				font:hover{
+			color: aquamarine;
+			cursor: pointer;
+		}
+		#div6{
+		text-align: right;
+			width: 100%;
+		}
+		a{
+			text-decoration: none;
+			color: dodgerblue;
+		}
+		a:hover{
+			color: red;
+		}

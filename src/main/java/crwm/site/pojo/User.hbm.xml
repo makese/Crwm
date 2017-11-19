@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping
+        SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="crwm.site.pojo">
+	<class name="User" table="t_user" >
+		<id name="id" length="32">
+			<generator class="uuid"/>
+		</id>
+		<property name="loginId" />
+		<property name="pwd" />
+		<property name="tel"/>
+		
+		<one-to-one name="userInfo" cascade="all" class="UserInfo"/>
+		<set name="cartSet" table="t_cart" cascade="all" inverse="true" lazy="true" >
+			<key column="user"/>
+			<one-to-many class="Cart"/>
+		</set>
+		<set name="addressSet" table="t_address" cascade="all" inverse="true" lazy="true">
+			<key column="user"/>
+			<one-to-many class="Address"/>
+		</set>
+		<set name="orderSet" cascade="all" table="t_order" inverse="true" lazy="true">
+			<key column="user"/>
+			<one-to-many class="Order"/>
+		</set>
+		<set name="userMessageSet" table="t_usermessage" cascade="all" inverse="true" lazy="true">
+			<key column="user"/>
+			<one-to-many class="UserMessage"/>
+		</set>
+		<set name="myCollect" table="t_collect"  lazy="true" >
+			<key column="user"/>
+			<many-to-many class="Shop" column="shop"/>
+		</set>
+	</class>
+	
+</hibernate-mapping>

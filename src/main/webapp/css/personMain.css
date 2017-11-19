@@ -1,0 +1,59 @@
+html,body,head{
+				margin:0;
+				padding:0;
+				height: 100%;
+				width: 100%;
+			}
+			*{
+			
+			font-size:14px;
+			}
+#div0{
+				border: 0px solid red;
+				width:100%;
+				height:200px;
+			
+			}
+			.tbl{
+				width:100%;
+				height:60%;
+				
+			}
+			#div1{
+				border:0px solid red;
+				width:100%;
+				height:150px;
+				
+				
+				
+			}
+			#div3{
+				width:9%;
+				height:95px;
+				border:0px solid red;
+				margin-top:20px;
+				float: left;
+				
+			}
+			#div4{
+				width:20%;
+				height:30px;
+				border:0px solid red;
+				margin-top:80px;
+				float: left;
+				margin-left:8px;
+			}
+			img{
+				width:100%;
+				height:100%;
+			}
+			#div5{
+				width:100%;
+				height:60px;
+				border:0px solid red;
+				
+			}
+			a{
+				text-decoration:none;
+				color: black;}
+			

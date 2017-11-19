@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping
+        SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="crwm.site.pojo">
+	<class name="Food" table="t_food" >
+		<id name="id">
+			<generator class="native"/>
+		</id>
+		<property name="foodName"/>
+		<many-to-one name="shop" />
+		<many-to-one name="foodType"/>
+		<property name="foodImg"/>
+		<property name="price" type="double"/>
+		<property name="introduction"/>
+		<one-to-one name="foodScore" cascade="all" property-ref="food"/>
+	</class>
+</hibernate-mapping>

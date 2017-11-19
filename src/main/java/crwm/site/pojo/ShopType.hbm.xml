@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping
+        SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="crwm.site.pojo">
+	<class name="ShopType" table="t_shoptype" >
+		<id name="id">
+			<generator class="native"/>
+		</id>
+	
+		<property name="typeName"/>
+	</class>
+</hibernate-mapping>

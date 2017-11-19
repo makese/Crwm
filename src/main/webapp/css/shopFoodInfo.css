@@ -1,0 +1,233 @@
+        html,body,head{
+				margin:0;
+				padding:0;
+				height: 100%;
+				width: 100%;
+			}
+			div{
+				float:left;
+			}
+			#div0{
+				border:1px solid ghostwhite;
+				width:100%;
+				height:100%;
+			
+				
+			}
+			#div1{
+				border:0px solid red;
+				width:100%;
+				height:9%;
+            
+             background:url(../images/shopfoodinfo.png) no-repeat top;			
+			}
+			#div3 img{
+				
+				cursor:pointer;
+				height:80%;
+				margin-left:40%;
+				margin-top:6px;
+			
+			}
+			#div10 img{
+				
+				cursor:pointer;
+				height:80%;
+				margin-left:40%;
+				margin-top:6px;
+			
+			}
+			span{
+				
+				border:0px solid red;
+				
+				
+				font-size:18px;
+				color: whitesmoke;
+			
+				
+			}
+			#s1{
+				margin-left:2%;
+				
+			}
+			#s2{
+				margin-left:3%;
+				
+			}
+			#s3{
+				margin-left:3%;
+				
+			}
+			#div2{
+					margin-left:2%;
+					border:0px solid black;
+					height:80%;
+					width:400px;
+					text-align:left;
+					margin-top:15px;
+					
+			}
+			#div3{
+					
+					border:0px solid yellow;
+					height: 100%;
+					width:200px;
+			}
+			#div4{
+					
+					border:0px solid black;
+	width:5%;
+	height:60%;
+	margin-top:9px;
+	float: left;
+				
+					
+			}
+			
+		
+			
+			
+			a{
+				text-decoration:none;
+				color: black;}
+			.tbl{
+				width:100%;
+				height: 100%;
+				text-align:center;
+			}
+		
+		a:hover>span{
+			background-color:white;
+			color:#3366FF;
+				
+		}
+      
+       #btn1{
+       	width: 80%;
+       	
+       	border: none;
+       	
+       	height: 100%;
+       }
+       #div4:hover>input{
+       	color:white;
+       	font-size:18px;
+       	
+       }
+        #div5:hover>a{
+       	color:white;
+       	font-size:18px;
+       	
+       	
+       }
+       #div8:hover>a{
+       	font-size:18px;
+     
+       	
+       }
+       #div3 :hover>img{
+       margin-top:0;
+       	width:150px;
+       	height:50px;
+       	margin-left:40px;
+      
+      
+       	
+       }
+#div9{
+	border:0px solid red;
+	width:300px;
+	height:280px;
+	margin-top:55px;
+	margin-left:1000px;
+	
+	position: absolute;
+}
+.tbl2{
+	width:100%;
+	height:280px;
+	text-align:center;
+	
+}
+font{
+	
+font-family: cursive;
+}
+#div10{
+	border:0px solid red;
+	width:4%;
+	height:90%;
+	margin-left:20%;
+	float: left;
+	margin-top:1px;
+	
+	
+}
+#div10 img{
+	margin-left: 0;
+	width:90%;
+	height:90%;
+}
+#div11{
+	border:0px solid black;
+	width:10%;
+	height:60%;
+	margin-top:17px;
+	float: left;
+	
+	
+	
+}
+
+select{
+	
+	width:90%;
+	height:60% ;
+	
+}
+#div13{
+	
+	border:0px solid black;
+	width:7%;
+	height:60%;
+	margin-top:17px;
+	float: left;
+	text-align: center;
+}
+	
+			.tbl4{
+				width: 80%;
+				height:30%;
+			}
+  
+       #div00{
+				border:0px solid red;
+				width:100%;
+				height:14%;
+				 background:url(../images/shopfoodinfo.png) no-repeat top;	
+           
+			}
+			.tbl00{
+				height:100%;
+				width:20% ;
+				margin-left:5%;
+				
+				color:white;
+				
+				
+			}
+  			#div01{
+			border:0px solid red;
+			width:80%;
+           height:70%;
+            float:left;
+           
+			}
+			#div02{
+			border:0px solid red;
+			width:20%;
+           height:70%;
+           float:left;
+			}
+			

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping
+        SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="crwm.site.pojo">
+	<class name="Order" table="t_order" >
+		<id name="id">
+		<generator class="native"/>
+		</id>
+		<many-to-one name="user" lazy="false"/>
+		<many-to-one name="shop" lazy="false"/>
+		<property name="shopGrade"/>
+		<property name="orderTime" type="timestamp"/>
+		<many-to-one name="address" lazy="false" />
+		<property name="total"/>
+		<set name="orderItemSet" table="t_orderItem" inverse="true" lazy="true" cascade="all">
+			<key column="orderid"/>
+			<one-to-many class="OrderItem" />
+		</set>
+		<many-to-one name="orderStatus" lazy="false"/>
+	</class>
+</hibernate-mapping>

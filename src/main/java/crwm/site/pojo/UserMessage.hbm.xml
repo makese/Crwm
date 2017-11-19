@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping
+        SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="crwm.site.pojo">
+	<class name="UserMessage" table="t_usermessage" >
+		<id name="id">
+		<generator class="native"/>
+		</id>
+		<property name="message"/>
+		<many-to-one name="user" lazy="false"/>
+		<many-to-one name="admin" lazy="false"/>
+		<property name="date" type="timestamp"/>
+	</class>
+</hibernate-mapping>

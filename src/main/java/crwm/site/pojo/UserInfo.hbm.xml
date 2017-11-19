@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping
+        SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="crwm.site.pojo">
+	<class name="UserInfo" table="t_useinfo" >
+
+		<id name="id">
+			<generator class="foreign">
+				<param name="property">user</param>
+			</generator>
+		</id>
+		<property name="nickName"/>
+		<property name="realName"/>
+		<property name="balance"/>
+		<property name="headImg"/>
+		<one-to-one name="user" class="User" constrained="true"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,60 @@
+ html,body,head{
+				margin:0;
+				padding:0;
+				height: 100%;
+				width: 100%;
+			}
+
+
+
+             #tbl{
+				width:100%;
+				height:400px;
+				text-align: center;
+			}
+			#div0{
+				border:0px solid red;
+				float:left;
+				
+			}
+			#div1{
+				border:0px solid red;
+				float: left;
+				width:50%;
+				height:60px;
+				margin-top:20px;
+				text-align:left;
+				margin-left:20px;
+			}
+			img{
+				width:100%;
+				height:100%;
+				margin-left:20px;
+			}
+			#div2{
+				border: 0px solid red;
+				width:33%;
+				text-align: center;
+				float:left;
+			
+			}
+			#div3{
+				border: 0px solid red;
+				width:33%;
+				text-align: center;
+				float:left;
+			
+			}
+			#div4{
+				border: 0px solid red;
+				width:33%;
+				text-align: center;
+				float:left;
+			
+			}
+			input{
+				width:50%;
+				height:35px;
+				background-color:#0099CC;
+				
+			}

@@ -1,0 +1,17 @@
+	
+	input[type='button']{
+		
+		width: 70%;
+		text-align: center;
+		border: 0px;
+		background-color: mediumaquamarine;
+		height:30px;
+	}
+	input[type='button']:hover{
+		color: red;
+		cursor: pointer;
+	}
+	
+	.div-conform{
+		text-align: center;
+	}

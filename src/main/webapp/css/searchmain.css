@@ -1,0 +1,22 @@
+ html,body,head{
+				margin:0;
+				padding:0;
+				height:100%;
+				width:100%;
+			}
+			#div0{
+				width:100%;
+				height:40%;
+				border:0px solid red;
+				
+				}
+				.tbl{
+					width:100%;
+					height:100%;
+					text-align:left;
+				}
+				input{
+					background-color:#3366FF;
+					
+				}
+			

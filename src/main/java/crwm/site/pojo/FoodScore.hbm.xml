@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping
+        SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="crwm.site.pojo">
+	<class name="FoodScore" table="t_foodscore" >
+		<id name="id">
+			<generator class="native"/>
+		</id>
+		<many-to-one name="food" unique="true" lazy="false"/>
+		<property name="assessCount"/>
+		<property name="totalPoints"/>
+	</class>
+</hibernate-mapping>

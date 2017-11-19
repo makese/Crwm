@@ -1,0 +1,39 @@
+	#continer{
+				height: 100%;
+				width: 100%;
+			}
+			#bottom{
+				height: 10%;
+				width: 100%;
+				background-color: #008DE1;
+			}
+			#chaoren{
+				height: 70%;
+				margin-top: 1%;
+				margin-left: 2%;
+				float: left;
+			}
+			#btn{
+				border: 0px;
+				background-color: #7FFFD4;
+			}
+			#btn:hover{
+				color: white;
+				cursor: pointer;
+			}
+			#account{
+				float: right;
+				color: white;
+				margin-right: 2%;
+				margin-top: 1%;
+			}
+			#myfrmae{
+				width: 100%;
+				height: 90%;
+			}
+			iframe{
+				
+				height: 100%;
+				width: 100%;
+			}
+		

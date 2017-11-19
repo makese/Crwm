@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.devMode" value="false" />
+    <constant name="struts.i18n.encoding" value="UTF-8"/>
+	<constant name="struts.configuration.xml.reload" value="true"/>
+    <constant name="struts.multipart.saveDir" value="/tmp"/>
+    <package name="default" namespace="/" extends="json-default">
+		<action name="register_*" class="registerAction" method="{1}">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+			<result name="wrong" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="login_*" class="loginAction" method="{1}">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+			<result type="redirect" name="login.jsp">/login.jsp</result>
+		</action>
+		<action name="loginOut_*" class="loginOutAction" method="{1}">
+			<result name="success" type="redirect">/shopindex.jsp</result>
+			<result name="ok" type="redirect">/index.jsp</result>
+		</action>
+		<action name="shopCommit_*" class="shopCommitAction" method="{1}">
+			<result name="success" type="redirect">/frames/shopForm.jsp</result>
+			<result name="commit" type="json">
+				<param name="root">result</param>
+			</result>
+			<result name="commitIdentIfy">/frames/shopDetail.jsp</result>
+			<result name="commitAptitude">/frames/shopSuccess.jsp</result>
+			<result name="ok" type="redirect">/index.jsp</result>
+			<result name="commiterror">/frames/shopUser.jsp</result>
+		</action>
+		<action name="pre_main_*" class="pre_mainAction" method="{1}">
+			<result name="success" type="redirect">/main.jsp</result>
+		</action>
+		<action name="searchShop_*" class="searchShopAction" method="{1}">
+			<result name="success" type="redirect">/frames/shopiframe.jsp</result>
+			<result name="search" type="redirect">/frames/searchmain.jsp</result>
+		</action>
+		<action name="pre_ShopFoodDetail_*" class="pre_ShopFoodDetailAction" method="{1}">
+			<result name="success" type="redirect">/shopFoodInfo.jsp</result>
+		</action>
+		<action name="searchFood_*" class="searchFoodAction" method="{1}">
+			<result name="success" type="redirect">/frames/allshop.jsp</result>
+			<result name="pinjia" type="redirect">/frames/pingjiastyle.jsp</result>
+			<result name="zizhi" type="redirect">/frames/shopzizhi.jsp</result>
+		</action>
+		<action name="reportShop_*" class="reportShopAction" method="{1}">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="collect_*" class="collectAction" method="{1}">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+			<result name="deletecollect" type="redirect">/frames/collect.jsp</result>
+		</action>
+		<action name="userOrderList_*" class="userOrderListAction" method="{1}">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+			<result name="person" type="redirect">/frames/personMain.jsp</result>
+			<result name="order" type="redirect">/frames/order.jsp</result>
+			<result name="evalute" type="redirect">/frames/evaluteOrder.jsp</result>
+		</action>
+		<action name="personCenter_*" class="personCenterAction" method="{1}">
+			<result name="success" type="redirect">/frames/orderItem.jsp</result>
+			<result name="addBalance" type="redirectAction">
+				<param name="actionName">userOrderList_setmax?operate=person</param>
+				<param name="namespace">/</param>
+			</result>
+			<result name="report" type="json">
+				<param name="root">result</param>
+			</result>
+			<result name="reportFood" type="json">
+				<param name="root">result</param>
+			</result>
+			<result name="verifyPwd" type="json">
+				<param name="root">result</param>
+			</result>
+			<result name="modifyPwd" type="redirect">/frames/modifyPwd.jsp</result>
+			<result name="ok" type="redirect">/frames/addressManager.jsp</result>
+			<result name="orderPay" type="redirectAction">
+				<param name="actionName">personCenter_orderItem?order.id=${order.id}</param>
+				<param name="namespace">/</param>
+			</result>
+			<result name="commitHeadImg" type="redirect">/frames/personMain.jsp</result>
+		</action>
+		<action name="skip_*" class="skipAction" method="{1}">
+			<result name="success" type="redirect">main.jsp</result>
+		</action>
+		<action name="cartDo_*" class="cartDoAction" method="{1}">
+			<result name="success" type="redirect">main.jsp</result>
+			<result name="fail" type="redirect">/login.jsp</result>
+			<result name="makeOrder" type="redirectAction">
+				<param name="actionName">userOrderList_setmax?operate=order</param>
+				<param name="namespace">/</param>
+				</result>
+			  <result name="add" type="redirectAction">
+			  	<param name="actionName">pre_ShopFoodDetail_predo?shop.id=${shop.id}</param>
+				<param name="namespace">/</param>
+			  </result>
+			  <result name="selAddr" type="redirectAction">
+			  <param name="actionName">personCenter_orderItem?order.id=${currOrder.id}</param>
+				<param name="namespace">/</param>
+			  </result>
+		</action>
+		</package>
+
+	<package name="login" namespace="/" extends="json-default">
+		<action name="login_shop" class="loginShopAction" method="login">
+			<result type="redirectAction">
+				<param name="actionName">index</param>
+				<param name="namespace">/shopManage</param>
+			</result>
+		</action>
+		<action name="login_admin" class="loginAdminAction" method="login">
+			<result type="redirectAction">
+				<param name="actionName">index</param>
+				<param name="namespace">/backManage</param>
+			</result>
+		</action>
+	</package>
+
+
+    <package name="backManage" namespace="/backManage" extends="json-default">
+		<action name="getShopAptitude_shop" class="shopManageAction" method="getShopAptitude">
+			<result type="dispatcher">/WEB-INF/backmanage/showShopAptitude.jsp</result>
+		</action>
+		<action name="index" class="loginAdminAction" method="index">
+			<result>/WEB-INF/backmanage/index.jsp</result>
+		</action>
+        <action name="*_index">
+            <result>/WEB-INF/backmanage/{1}Manage.jsp</result>
+        </action>
+		<action name="message_*Message">
+			<result>/WEB-INF/backmanage/{1}Message.jsp</result>
+		</action>
+		<action name="*_*" class="{2}ManageAction" method="{1}">
+            <result type="json">
+				<param name="ignoreHierarchy" >false</param>
+			</result>
+        </action>
+    </package>
+	<package name="shopManage" namespace="/shopManage" extends="json-default">
+		<action name="index" class="loginShopAction" method="index">
+			<result>/WEB-INF/shopmanage/index.jsp</result>
+		</action>
+		<action name="food_index" class="foodManageAction">
+			<result>/WEB-INF/shopmanage/foodManage.jsp</result>
+		</action>
+		<action name="*_index">
+			<result>/WEB-INF/shopmanage/{1}Manage.jsp</result>
+		</action>
+		<action name="message_*Message">
+			<result>/WEB-INF/shopmanage/{1}Message.jsp</result>
+		</action>
+		<action name="upload_food" class="uploadAction" method="upload"/>
+		<action name="*_*" class="{2}ManageAction" method="{1}">
+			<result type="json">
+				<param name="ignoreHierarchy" >false</param>
+			</result>
+		</action>
+	</package>
+</struts>

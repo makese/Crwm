@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping
+        SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="crwm.site.pojo">
+	<class name="Shop" table="t_shop" >
+		<id name="id">
+		<generator class="native"/>
+		</id>
+		<property name="loginId"/>
+		<many-to-one name="shopType" lazy="false"/>
+		<property name="pwd"/>
+		<property name="tel"/>
+		<property name="shopVerify"/>
+		<property name="shopLogo"/>
+		<one-to-one name="shopInfo" cascade="all"/>
+		<one-to-one name="shopAptitude" cascade="all"/>
+		<one-to-one name="shopScore" property-ref="shop" class="ShopScore"/>
+		<set name="orderSet" table="t_order" lazy="true" cascade="all" inverse="true">
+			<key column="shop"/>
+			<one-to-many class="Order"/>
+		</set>
+		<set name="foodSet" table="t_food" lazy="true" cascade="all" inverse="true">
+			<key column="shop"/>
+			<one-to-many class="Food"/>
+		</set>
+		<set name="shopMessageSet" table="t_shopmessage" cascade="all" inverse="true">
+			<key column="shop"/>
+			<one-to-many class="ShopMessage"/>
+		</set>
+		<set name="reportSet" table="t_report" cascade="all" inverse="true">
+			<key column="shop"/>
+			<one-to-many class="Report"/>
+		</set>
+		<set name="foodTypeSet" table="t_foodtype" cascade="all" inverse="true">
+			<key column="shop"/>
+			<one-to-many class="FoodType"/>
+		</set>
+	</class>
+</hibernate-mapping>
